@@ -1,0 +1,261 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.background{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(images/bg_cloud11.jpg);
+    background-size: cover;
+}
+.weatherheader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1% 5%;
+}
+.weatherheader h2{
+    background-color: hsl(0, 0%, 0%,.7);
+    width: 90%;
+    color: hsl(0, 0%, 100%,0.8);
+    padding: 5px 0px;
+    text-align: center;
+}
+.inpform{
+    width: 100%;
+    padding: 10px 60px;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.inpformflex{
+    width: 360px;
+    display: flex;
+    justify-content: space-around;
+}
+#searchbox {
+    
+    width: 300px;
+    height: 40px;
+    border: 0px;
+    outline: none;
+    color: white;
+    padding-left: 20px;
+    border-radius: 20px;
+    background-color: rgb(4, 4, 4,0.4);
+    transition: all .3s;
+    
+}
+#searchbox::placeholder{
+    color: hsl(0, 0%, 100%,.5);
+}
+#searchbox:hover{
+    
+    transform: scaleX(1.03);
+}
+.searcher{
+    color: black;
+    height: 40px;
+    width: 40px;
+    border: 0px;
+    
+    border-radius: 20px;
+    background-color: hsl(0, 0%, 100%,.6);
+    transition: all .2s;
+}
+
+.searcher:hover {
+    /*rgb(58, 114, 116)*/
+    color: hsl(0, 100%, 50%,.6);
+    
+
+}
+.content{
+    width: 100%;
+    height: 450px;
+    margin-top: 2.5%;
+    padding: 0% 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.resultant{
+    width: 90%;
+    height: 69%;
+    
+    color: white;
+    padding: 20px 20px;
+    background-color: hsl(0, 0%, 0%,0.3);
+    /*background-color: rgba(159, 227, 230, 0.1);
+    background-color: rgba(4, 4, 4, 0.7);*/
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: all .3s;
+    
+}
+.resultant:hover{
+    background-color: hsl(0, 0%, 0%,0.35);
+}
+.loc_headingdiv{
+    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.txt_now{
+    opacity: .4;
+    font-size: 1.1em;
+    transition: all .3s;
+}
+.resultant:hover .txt_now{
+    opacity: 1;
+    color: red;
+    font-weight: bold;
+    transform: scaleY(1.2);
+}
+
+.location{
+    font-size: 1.6em;
+    width: 200px;
+    color: hsl(0, 100%, 50%,.5);
+
+}
+.loc{
+    color: hsl(0, 0%, 100%,.8);
+    margin-right: 10px;
+}
+.result{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.weatherimg{
+    width: 200px;
+    transition: all .3s; 
+}
+.weatherimg:hover{
+    transform: scale(1.02);
+}
+.temp{
+    margin: 0% 15%;
+    width: 70%;
+    height: 50px;
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*border-radius: 5px;
+    box-shadow: 5px -5px 20px 1px black;*/
+    transition: all .3s;
+}
+.temp:hover{
+    
+    color: hsl(0, 100%, 50%,.5);
+    transform: scale(1.03);
+    
+    
+}
+.date_time{
+    width: 200px;
+    color: hsl(0, 0%, 100%,.8);
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    
+}
+.display{
+    width: 85%;
+    height: 30%;
+    padding: 10px 20px;
+    color: white;
+    background-color: hsl(0, 0%, 0%,0.3);
+    display: flex;
+    flex-direction: row;
+}
+
+.infos{
+    
+    width: 50%;
+    display: flex;
+    height: 100%;
+    
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.info{
+    width: 40%;
+    height: 90%;
+    /*border: 2px solid hsl(0, 0%, 0%,.4);*/
+    border-radius: 10px;
+    padding: 10px;
+    color: antiquewhite;
+    transition: all .3s;
+    cursor: pointer;
+    background-color: hsl(0, 0%, 100%,.1);
+}
+.info:hover{
+    background-color: rgb(4, 4, 4,0.7);
+    transform: scale(1.04);
+}
+.info h4{
+    color: white;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.infohead{
+    color: hsl(0, 0%, 100%,.7);
+}
+.lon_lat{
+    height: 90%;
+    width: 100%;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.description{
+    height: 90%;
+    width: 100%;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.humidity{
+    height: 90%;
+    width: 100%;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.wind{
+    height: 90%;
+    width: 100%;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.windunits{
+    font-size: 10px;
+}
+.icons{
+    color: hsl(0, 100%, 50%,.5);
+}
