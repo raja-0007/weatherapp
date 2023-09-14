@@ -320,6 +320,13 @@
         justify-content: space-around;
         
     }
+    .weatherheader h2{
+        background-color:hsl(0, 0%, 100%,0.3) ;
+        width: 97%;
+        color: hsl(0, 0%, 0%,.7);
+        padding: 5px 0px;
+        text-align: center;
+    }
     
     .inpform{
         width: 100%;
@@ -359,7 +366,7 @@
     .loc_headingdiv{
         width: 100%;
 
-        height: max-content;
+        height: 33px;
         flex-direction: row;
         align-items: center;
         
@@ -396,6 +403,7 @@
     
     .date_time{
         width: 100%;
+        height: 33px;
         color: hsl(0, 0%, 100%,.8);
         display: flex;
         flex-direction: row;
