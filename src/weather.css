@@ -231,6 +231,9 @@
     align-items: center;
     justify-content: center;
 }
+.lon_lat span{
+    width: 100px;
+}
 .description{
     height: 90%;
     width: 100%;
