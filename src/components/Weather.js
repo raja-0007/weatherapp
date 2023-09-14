@@ -136,7 +136,7 @@ function Weather() {
 
                     <h2>WEATHER APPLICATION</h2>
                     <form className='inpform' onSubmit={tempresult}>
-                        <span className='inpformflex'><input type='text' id='searchbox' placeholder='enter a city name' value={search} onChange={searchhandler}></input><button className='searcher'><i class="fa-solid fa-magnifying-glass fa-lg"></i></button></span>
+                        <span className='inpformflex'><input type='text' id='searchbox' placeholder='enter a city name' value={search} onChange={searchhandler}></input><button className='searcher'><i class="fa-solid fa-magnifying-glass "></i></button></span>
                     </form>
                 </div>
                 <div className='content'>
@@ -148,7 +148,7 @@ function Weather() {
                         <div className='date_time'><label>{currentdate}</label><label>{time}</label></div>
                     </div>
                     <div className='display'>
-                        <span className='infos'>
+                        <div className='infos'>
                             <div className='info'>
                                 <h4><span className='infohead'>Coordinates</span><i class="fa-solid fa-location-crosshairs icons"></i></h4>
                                 <span className='lon_lat'>
@@ -162,8 +162,8 @@ function Weather() {
                                     {result[4]}
                                 </span>
                             </div>
-                        </span>
-                        <span className='infos'>
+                        </div>
+                        <div className='infos'>
                             <div className='info'>
                                 <h4><span className='infohead'>humidity</span><span class="material-symbols-outlined icons">
                                     humidity_low
@@ -178,7 +178,7 @@ function Weather() {
                                     {result[6]}<small className='windunits'>kmph</small>
                                 </span>
                             </div>
-                        </span>
+                        </div>
 
 
 
