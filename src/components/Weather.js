@@ -9,9 +9,9 @@ import React, { useEffect, useState } from 'react'
 function Weather() {
     const [search, setSearch] = useState('')
     const [result, setResult] = useState([])
-    const [ctemp, setCtemp] = useState('')
+    
     const [time, setTime] = useState('')
-    //const [city, setCity] = useState('Delhi')
+    
     function times() {
         var obj = new Date()
         setTime(obj.toLocaleTimeString())
@@ -45,18 +45,12 @@ function Weather() {
         axios('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=c0362684f2ada7fd9502b79579bf3a59')
             .then(response => calculate_current_temp(response))
     }
-    /*useEffect(() => {
-        
-
-        document.getElementById('loc_name').innerText = city
-        axios('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=c0362684f2ada7fd9502b79579bf3a59')
-            .then(response => calculate_temp(response))
-    }, [city])*/
+    
 
 
     async function tempresult(e) {
         e.preventDefault()
-        //document.getElementById('loc_name').innerText = search
+        
         if (search != '') {
             try {
                 await axios.get('https://api.openweathermap.org/data/2.5/weather?q=' + search + '&appid=c0362684f2ada7fd9502b79579bf3a59')
@@ -69,6 +63,7 @@ function Weather() {
                 }
                 else {
                     alert('enter a valid city name')
+                    
                 }
             }
         }
@@ -90,41 +85,18 @@ function Weather() {
         const loc = response.data.name
         const kelvin = response.data.main.temp
         const celcius = kelvin - 273.15
-        //console.log(response.data.weather[0].description)
+        
         const speed = (response.data.wind.speed * 3.6).toFixed(2)
-        //console.log(response.data.weather[0].description)
+        
         const coord = response.data.coord //has two keys => lon, lat
-        //console.log(response.data.weather[0].description)
+        
         const description = response.data.weather[0].description
+        let icon = response.data.weather[0].icon
+        var iconurl = 'https://openweathermap.org/img/wn/'+icon+'@2x.png'
+        document.getElementById('iconw').src = iconurl
         setResult([loc, Math.round(celcius), coord.lon, coord.lat, response.data.weather[0].description, response.data.main.humidity, speed])
 
-        if (description.includes('clouds')) {
-
-
-            setCtemp(cloud)
-        }
-        else if (description.includes('rain')) {
-            setCtemp(rain)
-        }
-        else if (description.includes('haze')) {
-            setCtemp(haze)
-        }
-        else if (description.includes('mist')) {
-            setCtemp(haze)
-        }
-        else if (description.includes('fog')) {
-            setCtemp(haze)
-        }
-        else if (description.includes('clear sky')) {
-            setCtemp(clearsky)
-        }
-        else if (description.includes('drizzle')) {
-            setCtemp(drizzle)
-        }
-        else {
-            setCtemp('')
-        }
-
+        
     }
 
 
@@ -142,8 +114,9 @@ function Weather() {
                 <div className='content'>
                     <div className='resultant'>
                         <div className='loc_headingdiv'><span className='location'><i class="fa-solid fa-location-dot loc"></i>{result[0]}</span><br></br><span className='txt_now'>Now</span></div>
-                        <div className='result'><img src={ctemp} className='weatherimg'></img>
-                            <br></br><label className='temp'>{result[1]}&deg;C</label>
+                        <div className='result'><img id='iconw'  src='' className='weatherimg' alt='weather icon'></img>
+                            <label className='temp'>{result[1]}&deg;C</label>
+                            
                         </div>
                         <div className='date_time'><label>{currentdate}</label><label>{time}</label></div>
                     </div>

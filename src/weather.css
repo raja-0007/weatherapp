@@ -7,7 +7,7 @@
 .background{
     width: 100vw;
     height: 100vh;
-    background-image: url(images/bg_cloud11.jpg);
+    background-image: url(images/bg_cloud3.jpg);
     background-size: cover;
 }
 .weatherheader{
@@ -143,11 +143,11 @@
     align-items: center;
 }
 .weatherimg{
-    width: 200px;
+    width: 150px;
     transition: all .3s; 
 }
 .weatherimg:hover{
-    transform: scale(1.02);
+    transform: scale(1.04);
 }
 .temp{
     margin: 0% 15%;
@@ -180,7 +180,7 @@
 .display{
     width: 85%;
     height: 30%;
-    padding: 10px 20px;
+    padding: 10px 10px;
     color: white;
     background-color: hsl(0, 0%, 0%,0.3);
     display: flex;
@@ -220,7 +220,7 @@
     justify-content: space-between;
 }
 .infohead{
-    color: hsl(0, 0%, 100%,.7);
+    color: hsl(0, 0%, 100%,.6);
 }
 .lon_lat{
     height: 90%;
